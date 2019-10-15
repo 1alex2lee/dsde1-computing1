@@ -37,10 +37,12 @@ while True:
     num1=input('Enter first number: ')
     num2=input('Enter second number: ')
     status=(num1==num2)
-    print(status)
+    print(status)()
 
-'''
-num=1
+
+
 while True:
     num=num+1
     print(num)
+
+'''

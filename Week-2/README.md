@@ -2,14 +2,14 @@
 # Week 2 Exercises
 
 # Tuesday - The Command Line
-
+  
 Go to [this site to download a zip file](https://github.com/veltman/clmystery) and the instructions to play the game. It is a text-based game to help you get comfortable navigating around the command line. Yes, you could easily cheat! But the point is to use the game to make learning these commands more fun. Could you give boring exercises if you prefer.
 
 Can work on your own or in pairs.
 
 # Thursday - Python Data Types and Scripting
 
-This week is about getting comfortable with the building blocks of Python and how to start constructing a new program.
+This week is about getting comfortable with the building blocks of Python and how to start constructg a new program.
 
 We'll start with working in the interactive python shell. 
 
