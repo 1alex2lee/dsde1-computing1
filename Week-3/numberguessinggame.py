@@ -1,8 +1,7 @@
 import random
 
-
 num=random.randint(1,5)
-print(num)
+#print(num)
 ans=int(input("Enter a number between 1 and 5: "))
 attempt=1
 
@@ -19,4 +18,3 @@ while True:
         else:
             print('Sorry, Out of guesses.')
             break
-
