@@ -30,7 +30,7 @@ class TestSum(unittest.TestCase):
         '''
         Test when gravity is 0
         '''
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ZeroDivisionError):
             pen.period(5, 0)
 
 
