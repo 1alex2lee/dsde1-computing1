@@ -7,4 +7,3 @@ def period(L,g):
     except ValueError or TypeError or ZeroDivisionError:
         print('You did not enter a number. ')
     return T
-
