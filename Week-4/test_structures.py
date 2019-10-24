@@ -1,5 +1,5 @@
 '''
-test_toys.py
+test_structures.py
 
 Unit tests for structures functions.
 '''
@@ -11,7 +11,7 @@ import io
 
 import structures as st
 
-class TestSum(unittest.TestCase):
+class TestStructures(unittest.TestCase):
     def set_up(self):
         pass
 
@@ -101,12 +101,6 @@ class TestSum(unittest.TestCase):
         result = st.index_exists({"ind1": "val1", "ind2": "val2"} , "ind1")
         self.assertIs(result, True)
 
-    def test_index_exists2(self):
-        '''
-        Test 
-        '''
-        result = st.index_exists({"ind1": "val1", "ind2": "val2"} , "ind3")
-        self.assertIs(result, False)
 
     def test_value_exists1(self):
         '''
@@ -129,8 +123,6 @@ class TestSum(unittest.TestCase):
         '''
         result = st.merge_dictionaries({"a": 1, "c": 3}, {"b": 2, "d": 4})
         self.assertEqual(result, {"a": 1, "c": 3, "b": 2, "d": 4})
-
-
 
 
 if __name__ == '__main__':
