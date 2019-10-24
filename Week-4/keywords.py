@@ -18,7 +18,7 @@ def welcome_message(user_name='',place=''):
     if user_name=='' and place=='':
         return('Hello and welcome')
     elif place=='':
-        return('Hello, '+user_name)
+        return('Hello, '+user_name+', and welcome')
     elif user_name=='':
         return('Hello and welcome to '+place)
     else:
@@ -40,5 +40,28 @@ def welcome_message(user_name='',place=''):
 # (return list of all modes if there is a tie between multiple values)
 # if avg_type='mean', return the mean of the list
 # if avg_type='median', return the median of this list
-def list_average(list={},avg_type=''):
-    
+def list_average(list=[],avg_type=''):
+    if avg_type=='' or avg_type=='mean':
+        if list==[]:
+            return(0)
+        else:
+            return sum(list)/len(list)
+    elif avg_type=='mode':
+        if list==[]:
+            return[]
+        else:
+            return [max(set(list), key=list.count)]
+    elif avg_type=='median':
+        if list==[]:
+            return None
+        else:
+            list.sort()
+            amount=len(list)
+            if amount%2!=0:
+                return list[int(amount/2)]        
+            else:
+                return (list[int(amount/2-0.5)]+list[int(amount/2+0.5)])/2
+'''    print(list_average([1,2,3,4,5]))
+    print(list_average([1,2,3,4,4,5],avg_type='mode'))
+    print(list_average([1,2,3,4,5],avg_type='median'))
+    print(list_average([1,2,3,4,5,6],avg_type='median'))'''
