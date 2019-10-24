@@ -9,6 +9,7 @@ Simple functions performing operations on basic Python data structures.
 # write a function that returns a list containig the first and the last element
 # of "the_list". 
 def first_and_last(the_list):
+    '''gives the first and last value in the list'''
     return [the_list[0], the_list[-1]]
 '''print (first_and_last([0,1,2,3,4,5,6]))'''
 
@@ -19,6 +20,7 @@ def first_and_last(the_list):
 # If "end" is greater then "beginning" or any og the indices is out of the
 # list, raise a "ValueError" exception. 
 def part_reverse(the_list, beginning, end):
+    '''give the reverse of the list between the beginning and the end'''
     try:
         new_list=the_list[beginning:end]
         new_list.reverse()
@@ -32,6 +34,7 @@ print (part_reverse([0,1,2,3,4,5,6],5,2))'''
 # same value. For example if the_list = [0,1,2,3,4] and index = 3 the function
 # will return [0,1,2,3,3,3,4]. 
 def repeat_at_index(the_list, index):
+    '''repeats the value at index in the list 3 times'''
     the_list.insert(index,the_list[index])
     the_list.insert(index,the_list[index])
     return the_list
@@ -43,6 +46,7 @@ print (repeat_at_index([0,1,2,3,4,5,6],4))'''
 # write a function that checks whether the word is a palindrome, i.e. it reads
 # the same forward and backwards
 def palindrome_word(word):
+    '''checks if a word is a palindrome'''
     word=word.lower()
     word=list(word)
     status = word==word[::-1]
@@ -55,6 +59,7 @@ def palindrome_word(word):
 # like fullstops, commas, etc. Also do not consider whether the letter is
 # capital or not. 
 def palindrome_sentence(sentence):
+    '''check if a sentence is a palindrome'''
     import string
     sentence=sentence.translate(str.maketrans(dict.fromkeys(string.punctuation)))
     sentence=sentence.lower()
@@ -72,6 +77,7 @@ def palindrome_sentence(sentence):
 # or at the end and the must be exactly one space after the end of the first
 # sentence.
 def concatenate_sentences(sentence1, sentence2):
+    '''put 2 sentences together'''
     import string
     sentence1=sentence1.strip()
     sentence2=sentence2.strip()
@@ -91,6 +97,7 @@ def concatenate_sentences(sentence1, sentence2):
 # write a function that checks whether there is a record with given key in the
 # dictionary. Return True or False.
 def index_exists(dictionary, key):
+    '''check if key exists in dictionary'''
     if key in dictionary:
         status = True
     else:
@@ -100,6 +107,7 @@ def index_exists(dictionary, key):
 # write a function which checks whether given value is stored in the
 # dictionary. Return True or False.
 def value_exists(dictionary, value):
+    '''check if value exists in dictionary'''
     if value in dictionary.values():
         status = True
     else:
@@ -109,6 +117,7 @@ def value_exists(dictionary, value):
 # write a function that returns a new dictionary which contains all the values
 # from dictionary1 and dictionary2.
 def merge_dictionaries(dictionary1, dictionary2):
+    '''merges 2 dictionaries together'''
     newdict = dictionary1.copy()
     newdict.update(dictionary2)
     return newdict
